@@ -24,7 +24,7 @@ function requestHandler(req, res)
     {
       result = serviceCharge(query);
     }
-    else if (query['cmd'] == undefined)
+    else if (isNaN(query['cmd']))
     {
       throw Error("A command must be specified");
     } 
